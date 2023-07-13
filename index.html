@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diákhitelszamla.hu</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin:0px;
+  padding:0px;
+}
+.flex-containerno {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto; 
+  padding: 0 px;
+  margin-right: auto;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 970px;
+  height: 200px;
+  background: #f3f3f3;
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 5px #9b9b9b,
+             -1px -1px 5px #9b9b9b;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: rgb(12, 12, 12);
+}
+.flex-containerno:hover {
+  border: 1px solid #5b5b5b;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto; 
+  padding: 0 px;
+  margin-right: auto;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 970px;
+  height: 200px;
+  background: #dddddd;
+  border: 2px solid #ff6f28;
+  box-shadow: 2px 2px 5px #ff6f28,
+             -1px -1px 5px #ff6f28;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+.flex-container:hover {
+  border: 2px solid #5b5b5b;
+}
+
+.flex-item-left {
+  padding: 25px;
+  flex: 70%;
+}
+
+.flex-item-right {
+  flex: 30%;
+}
+.shadow__btn_reszletek {
+  padding: 12px 40px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  cursor: pointer;
+  position: absolute;
+  
+}
+.shadow__btn_reszletek {
+  background: #ff6f28;
+  box-shadow: 0 0 25px rgb(217, 109, 8);
+  cursor: pointer;
+}
+.shadow__btn_reszletek:hover {
+  box-shadow: 0 0 5px #ff6f28,
+              0 0 15px #ff6f28,
+              0 0 25px #ff6f28,
+              0 0 35px #ff6f28;
+              cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+.promociosszoveg{
+  position: absolute;
+  left: -20px;
+  transform: rotate(-90deg);
+  color: rgb(12, 12, 12);
+  padding: 0px;
+  font-size: small;
+  font-weight:400;
+}
+.bankilogo {
+  position: absolute;
+  left: 22px;
+  width:clamp(0.85rem, 2.5vw, 1.4rem);
+}
+.termekelonyok{
+position: absolute;
+left: 155px;
+font-size: clamp(0.6rem, 2.2vw, 1.1rem);
+text-align:left;
+padding:15px;
+padding-top:50px;
+padding-bottom:40px;
+font-weight: 400;
+}
+.disclaimer {
+  margin-left: auto; 
+  color:rgb(12, 12, 12);
+  margin-right: auto;
+  padding: 10px;
+  display: flex;
+  align-items: justify;
+  justify-content: center;
+  box-sizing: border-box;
+  text-colo
+  width: 95%;
+  max-width: 960px;
+}
+.gyikfejlec {
+	text-align: center;
+  max-width: 980px;
+  margin-left: auto; 
+  margin-right: auto;
+  color: rgb(12, 12, 12);
+}
+.gyik {
+  margin-left: auto; 
+  padding: 10px;
+  margin-right: auto;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 960px;
+  cursor: pointer;
+  color: rgb(12, 12, 12);
+}
+.question {
+  border: 1px solid white;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+}
+.tuske {
+  border: 1px solid white;
+  border-radius:5px;
+  padding-left:6px;
+  padding-right:6px;
+  background-color:#f1f1f1;
+  font-weight: 600;
+  box-shadow: 1px 1px 3px #a3a3a3,
+             -1px -1px 3px #a3a3a3;
+
+}
+
+.answer {
+  padding-left: 40px;
+  padding-bottom:20px;
+}
+.footer {
+  background-color: #313131;
+  padding: 25px;
+  color: white;
+  text-color:white;
+  text-align: center;
+  border-radius: 25px 25px 0 0;
+  max-width: 980px;
+  margin-left: auto; 
+  margin-right: auto;
+  cursor: pointer;
+}
+.header {
+  background-color: #313131;
+  padding: 25px;
+  color: white;
+  text-color:white;
+  text-align: center;
+  border-radius: 0 0 25px 25px;
+  max-width: 980px;
+  margin-left: auto; 
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.jogiinfok{
+  text-color:white;
+  text-decoration:none;
+}
+.social-links,.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: white;
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 0px;
+}
+
+.social-btn:hover {
+  width: 180px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: 180px;
+}
+a {
+  text-decoration: none;  
+}
+.headerpicture {
+  color: #3c3c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+.headertext {
+  font-size: clamp(3.9rem, 6.9vw, 5.9rem);
+  font-weight: bold;
+  margin-bottom: -15px;
+  padding-top:20px;
+  padding-bottom:10px;
+  background: linear-gradient(
+    to right,
+    #ff9951 10%,
+    #ff7329 30%,
+    #fcb888 60%,
+    #ff7329 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 3s ease-in-out infinite alternate;
+}
+	.poweredby
+  {
+    height:50px;
+     position: relative;
+       margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  }
+  @keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.headline {
+  margin-left: auto; 
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:30px;
+  padding-top:30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 600;
+  width: 95%;
+  max-width: 960px;
+  font-size: clamp(2.4rem, 1.9vw, 1.2rem);
+}
+.kozoselony {
+  margin-left: auto; 
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 960px;
+  font-size: clamp(1.4rem, 1vw, 1rem);
+}
+</style>
+<script>
+    function toggleAnswer(id) {
+    var answer = document.getElementById(id);
+    if (answer.style.display === "none") {
+    answer.style.display = "block";
+    } else {
+    answer.style.display = "none";
+    }
+    }
+    </script>
+</head>
+<body>
+
+  <footer>
+    <div class="header">
+        <div class="headertext">
+            Diákhitelszámla.hu
+          </div>
+      <a href="https://money.hu" target="_blank"><img src="images/poweredby2.png" width="250px" alt="" class="picture"></a><br>
+     
+     
+      
+      </div>
+  
+
+      
+  </footer>
+
+
+                  <div class="headline">
+                    Igényelj diákhitelt kedvezményes számlavezetéssel!
+                  </div>
+</div>
+
+<div class="kozoselony">
+    <table>
+        <tr>
+            <td><img src="images/check.png" width="38px"></td>
+            <td>Díjmentes havi számlavezetési díj</td>
+        </tr>
+        <tr>
+            <td><img src="images/check.png" width="38px"></td>
+            <td>Díjmentes bankkártya</td>
+        </tr>
+        <tr>
+            <td><img src="images/check.png" width="38px"></td>
+            <td>Díjmentes net- és mobilbank</td>
+        </tr>
+        <tr>
+            <td><img src="images/check.png" width="38px"></td>
+            <td>Díjmentes átutalások</td>
+        </tr>
+        </table>
+
+
+</div>
+
+<a href="https://www.erstebank.hu/hu/ebh-nyito/mindennapi-penzugyek/szamlak/erste-diakhitel-szamla" target="_blank">
+<div class="flex-container">
+  <div class="flex-item-left"style="display: flex; justify-content: center; align-items: center;">
+    <div class="promociosszoveg"> &nbsp;&nbsp;&nbsp;Promóció
+    </div>
+    <div class="bankilogo"><img src="images/ErsteBank.svg">
+    </div>
+    <div class="termekelonyok"style="display: flex; justify-content: center; align-items: center;">
+        <table>
+        <tr>
+            <td><img src="images/erste1.png" width="28px"></td>
+            <td>30 000 Ft jóváírás online számlanyitás esetén</td>
+        </tr>
+        <tr>
+            <td><img src="images/erste2.png" width="28px"></td>
+            <td>Havi ATM csomagdíjért kedvezményes tranzakciós díj</td>
+        </tr>
+        <tr>
+            <td><img src="images/erste3.png" width="28px"></td>
+            <td>Egyszeri 5000 Ft lakásbiztosítás kedvezmény</td>
+        </tr>
+        <tr>
+            <td><img src="images/erste4.png" width="28px"></td>
+            <td>120 000 Ft babaváró hitel kedvezmény</td>
+        </tr>
+        </table>
+    </div>
+  </div>
+  <div class="flex-item-right"style="display: flex; justify-content: center; align-items: center;"><button class="shadow__btn_reszletek">RÉSZLETEK &#10095;</button></div>
+</div>
+</a>
+<a href="https://www.mbhbank.hu/lakossagi/szamlavezetes/mbh-diakhitel-szamla" target="_blank">
+<div class="flex-containerno">
+    <div class="flex-item-left"style="display: flex; justify-content: center; align-items: center;">
+      <div class="promociosszoveg">&nbsp;&nbsp;&nbsp;Promóció
+      </div>
+      <div class="bankilogo"><img src="images/MBHBank.svg">
+      </div>
+      <div class="termekelonyok"style="display: flex; justify-content: center; align-items: center;">
+          <table>
+          <tr>
+              <td><img src="images/mbh1.png" width="28px"></td>
+              <td>Készpénzfelvétel 300 Ft kedvezménnyel</td>
+          </tr>
+          <tr>
+              <td><img src="images/mbh2.png" width="28px"></td>
+              <td>Kártyapótlás díja 50% kedvezménnyel</td>
+          </tr>
+          <tr>
+              <td><img src="images/mbh3.png" width="28px"></td>
+              <td>EXTRA megtakarítási számla lehetőség</td>
+          </tr>
+          <tr>
+              <td><img src="images/mbh4.png" width="28px"></td>
+              <td>Jelzáloghitel kamatkedvezmény</td>
+          </tr>
+          </table>
+      </div>
+    </div>
+    <div class="flex-item-right"style="display: flex; justify-content: center; align-items: center;"><button class="shadow__btn_reszletek">RÉSZLETEK &#10095;</button></div>
+  </div>
+</a>
+<a href="https://granitbank.hu/diakhitelszamla/" target="_blank">
+  <div class="flex-containerno">
+    <div class="flex-item-left"style="display: flex; justify-content: center; align-items: center;">
+      <div class="promociosszoveg">&nbsp;&nbsp;&nbsp;Promóció
+      </div>
+      <div class="bankilogo"><img src="images/GranitBank.svg">
+      </div>
+      <div class="termekelonyok"style="display: flex; justify-content: center; align-items: center;">
+          <table>
+          <tr>
+              <td><img src="images/granit1.png" width="28px"></td>
+              <td>22 000 Ft jóváírás szelfis számlanyitás esetén</td>
+          </tr>
+          <tr>
+              <td><img src="images/granit2.png" width="28px"></td>
+              <td>4% extra jóváírás számlára érkező Diákhitel1 utalásokra</td>
+          </tr>
+          <tr>
+              <td><img src="images/granit3.png" width="28px"></td>
+              <td>Kiemelkedő látra szóló kamat </td>
+          </tr>
+          <tr>
+              <td><img src="images/granit4.png" width="28px"></td>
+              <td>9000 Ft jóváírás Gránit lakossági bankszámla ajánlásakor</td>
+          </tr>
+          </table>
+      </div>
+    </div>
+    <div class="flex-item-right"style="display: flex; justify-content: center; align-items: center;"><button class="shadow__btn_reszletek">RÉSZLETEK &#10095;</button></div>
+  </div>
+</a>
+<a href="https://www.otpbank.hu/portal/hu/Bankszamlak/Ujatszeretnek/otp-diakhitel-szamla" target="_blank">
+  <div class="flex-containerno">
+    <div class="flex-item-left"style="display: flex; justify-content: center; align-items: center;">
+      <div class="promociosszoveg">&nbsp;&nbsp;&nbsp;Promóció
+      </div>
+      <div class="bankilogo"><img src="images/OTPBank.svg">
+      </div>
+      <div class="termekelonyok"style="display: flex; justify-content: center; align-items: center;">
+          <table>
+          <tr>
+              <td><img src="images/otp1.png" width="28px"></td>
+              <td>5-50% visszatérítés Diákhitel kártyás vásárláshoz </td>
+          </tr>
+          <tr>
+              <td><img src="images/otp2.png" width="28px"></td>
+              <td>Induló díj- és kamatkedvezmény jelzáloghitel igényléskor</td>
+          </tr>
+          <tr>
+              <td><img src="images/otp3.png" width="28px"></td>
+              <td>5%  kedvezmény a lakásbiztosítás árából</td>
+          </tr>
+          <tr>
+              <td><img src="images/otp4.png" width="28px"></td>
+              <td>Évente egyszer 100% kedvezmény utasbiztosítás árából</td>
+          </tr>
+          </table>
+      </div>
+    </div>
+    <div class="flex-item-right"style="display: flex; justify-content: center; align-items: center;"><button class="shadow__btn_reszletek">RÉSZLETEK &#10095;</button></div>
+  </div>
+
+  <div class="disclaimer">
+    Jelen tájékoztatás kizárólag a figyelemfelkeltést szolgálja, nem teljes körű és nem minősül ajánlattételnek.<br>
+    A Bankok által nyújtott különböző Diákhitel Számla kedvezményeket a Bankok saját hirdetményei, valamint a számlacsomagok részletes leírásai, igénybevételi feltételei, általános szerződési feltételei, illetve kapcsolódó Üzletszabályzatai tartalmazzák.
+</div>
+
+
+
+<div class=gyik>
+    <h2 class="gyikfejlec">
+        Diákhitel Számla - Gyakran ismételt kérdések
+    </h2>
+    <div class=question onclick=toggleAnswer('answer1')><span class="tuske"><strong>&#8897;</strong></span>&nbsp;&nbsp;Mi az a Diákhitel Számla?</div>
+    <div class=answer id=answer1 style=display:none>A Diákhitel Számla a diákhitellel rendelkező ügyfelek költségeinek csökkentése érdekében létrehozott kedvezményes számlavezetési szolgáltatás.</div>
+    <div class=question onclick=toggleAnswer('answer2')><span class="tuske"><strong>&#8897;</strong></span>&nbsp;&nbsp;Mikor vagy jogosult a Diákhitel Számla igénybevételére?</div>
+    <div class=answer id=answer2 style=display:none>Ha új diákhitel igénylő vagy, illetve ha Diákhitel1, Diákhitel2 vagy Képzési Hiteled folyósítási szakaszban van. <br>A kedvezményes számlacsomagot aktív és passzív jogviszonnyal, valamint a folyósítás szüneteltetése alatt is igénybe veheted.</div>
+    <div class=question onclick=toggleAnswer('answer3')><span class="tuske"><strong>&#8897;</strong></span>&nbsp;&nbsp;Miért előnyös a Diákhitel Számla?</div>
+    <div class=answer id=answer3 style=display:none>Az új számlavezetési szolgáltatás célja, hogy a diákhitellel rendelkező ügyfelek költségeit csökkentsék. <br>A nyertes pénzintézetek a Diákhitel Számlához kapcsolódó legfontosabb alapszolgáltatásokat ingyenesen biztosítják, úgy, mint az egyedi bankkártya éves díja, számlavezetési díj, netbank, mobilbank, telebank, személyes megjelenés nélküli ügyintézés vagy a folyószámla megszűntetése. <br>A kötelezően nyújtandó ingyenes szolgáltatásokon túl további, rendkívüli kedvezményeket biztosítanak a diákhiteles ügyfeleknek.</div>
+    <div class=question onclick=toggleAnswer('answer4')><span class="tuske"><strong>&#8897;</strong></span>&nbsp;&nbsp;Mikortól igényelhető DIákhitel Számla?</div>
+    <div class=answer id=answer4 style=display:none>A kedvezményes számlavezetési szolgáltatás 2023. július 1-től érhető el.</div>
+    <div class=question onclick=toggleAnswer('answer5')><span class="tuske"<strong>&#8897;</strong></span>&nbsp;&nbsp;Hol érhető el a Diákhitel Számla?</div>
+    <div class=answer id=answer5 style=display:none>A Diákhitel Számla az Erste Banknál, a Gránit Banknál, AZ MBH Banknál illetve az OTP Banknál érhető el.</div>
+    <div class=question onclick=toggleAnswer('answer6')><span class="tuske"><strong>&#8897;</strong></span>&nbsp;&nbsp;Hogyan igényelhető Diákhitel Számla?</div>
+    <div class=answer id=answer6 style=display:none>Ha most szeretnél diákhitelt felvenni, a hiteligénylés során válaszd ki azt a bankot, mely számodra a legkedvezőbb számlavezetési feltételeket biztosítja. <br>Amennyiben már rendelkezel diákhitellel  és te is szeretnél kedvezményes Diákhitel Számlára váltani, a Diákhitel Direkt „Nyomtatványok-Kedvezmények” menüpontjában találsz hozzá módosító adatlapot. Legyen szó a hiteligénylésed, vagy a módosító adatlapod leadásáról, minden esetben a bank fog keresni téged a számlanyitással kapcsolatban.</div>
+    <div class=question onclick=toggleAnswer('answer7')><span class="tuske"><strong>&#8897;</strong></span>&nbsp;&nbsp;Meddig érvényes a kedvezményes számla?</div>
+    <div class=answer id=answer7 style=display:none> A folyósításra való jogosultságod megszűnését követően még egy évig még igénybe veheted a kedvezményes Diákhitel Számlát.</div>
+    <div class=question onclick=toggleAnswer('answer8')><span class="tuske"><strong>&#8897;</strong></span>&nbsp;&nbsp;Milyen kedvezményeket biztosítanak a bankok?</div>
+    <div class=answer id=answer8 style=display:none>Az Erste Banknál, Gránit Banknál, MBH Banknál és OTP Banknál biztosított kedvezményekről az egyes bankok oldalain tájékozódhatsz.</div>
+</div>
+
+
+<footer>
+	<div class="footer">
+    <a href="https://www.money.hu/" target="_blank"><img src="images/money_logo_white.png" width="200px" alt="" class="picture"></a><br>
+   
+   
+    <div class="social-links">
+      <a href="https://www.facebook.com/szakerto.money.hu" target="_blank"><div id="facebook" class="social-btn flex-center">
+        <img src="images/moneyfb.png" width="32px"><span>szakerto.money.hu</span>
+      </div>
+      </a>
+     <a href="https://hu.linkedin.com/company/ingatlancom" target="_blank"><div id="linkedin" class="social-btn flex-center">
+        <img src="images/moneylinkedin.png" width="32px"><span>ingatlancom</span>
+      </div>
+    </a>
+      <a href="https://www.money.hu/" target="_blank"><div id="" class="social-btn flex-center">
+        <img src="images/moneyhu.png" width="32px"><span>www.money.hu</span>
+      </div>
+    </a>
+    </div>
+
+  <br>
+  <div class="jogiinfok"><a href="https://www.money.hu/altalanos-szolgaltatasi-feltetelek" target="_blank">ÁSZF</a></div>
+    
+</footer>
+
+</body>
+</html>
+
+
